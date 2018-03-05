@@ -15,7 +15,7 @@ persist-tun
 ca ca.crt
 cert <%= @client_cn %>.crt
 key <%= @client_cn %>.key
-comp-lzo
+compress <%= node['openvpn']['config']['compress'] %>
 verb 3
 <% if node['openvpn']['server_verification'] %>
 <%= node['openvpn']['server_verification'] %>
